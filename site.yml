@@ -1,0 +1,13 @@
+---
+- name: Provision VM
+  hosts: all
+  remote_user: bxz
+  become: yes
+  become_user: root
+  vars:
+    docker_users: bxz
+  roles:
+    - packages
+    - sshd
+    - docker
+
