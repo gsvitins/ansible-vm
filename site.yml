@@ -10,4 +10,5 @@
     - packages
     - sshd
     - docker
+    - fail2ban
 

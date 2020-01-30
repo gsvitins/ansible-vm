@@ -1,0 +1,6 @@
+fail2ban_ignore_ip: "127.0.0.1/8"
+fail2ban_find_time: 500
+fail2ban_ban_time: 2592000
+fail2ban_max_retry: 3
+fail2ban_ban_action: "iptables-multiport"
+fail2ban_action: "%(action_)s"

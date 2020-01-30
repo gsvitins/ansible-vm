@@ -1,0 +1,15 @@
+---
+- name: remove old dotfiles
+  become: no
+  file:
+    path: ~/git/dotfiles
+    state: absent
+
+- name: clone dotfiles git repo
+  git:
+    repo: https://github.com/gsvitins/dotfiles.git
+    dest: ~/git/dotfiles
+
+- name: execute dotfiles install script
+  become: no
+  shell: chdir=~/git/dotfiles ./install.sh
