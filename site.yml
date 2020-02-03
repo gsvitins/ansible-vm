@@ -6,9 +6,10 @@
   become_user: root
   vars:
     docker_users: bxz
+    terraform_version: 0.12.20
   roles:
     - packages
     - sshd
     - docker
     - fail2ban
-
+    - terraform
