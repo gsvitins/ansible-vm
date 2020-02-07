@@ -6,12 +6,15 @@
   become_user: root
   vars:
     docker_users: bxz
+    omz_users:
+      - root
+      - bxz
     terraform_version: 0.12.20
   roles:
-    - dotfiles
-    - omz
     - packages
     - sshd
     - docker
     - fail2ban
     - terraform
+    - dotfiles
+    - omz
