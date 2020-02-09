@@ -16,7 +16,7 @@
     dest: /usr/local/bin
     remote_src: yes
     keep_newer: no
-    mode: 0770
+    mode: 0755
   when: stat_result.stat.exists == False
 
 
