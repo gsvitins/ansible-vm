@@ -6,6 +6,7 @@
     state: absent
 
 - name: clone dotfiles git repo
+  become: no
   git:
     repo: https://github.com/gsvitins/dotfiles.git
     dest: ~/git/dotfiles
